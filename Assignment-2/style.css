@@ -1,0 +1,312 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fredoka One', cursive;
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .controls {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .template-section {
+            margin-bottom: 25px;
+        }
+
+        .template-section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .upload-section {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 2px dashed #667eea;
+        }
+
+        .upload-section h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .file-input-wrapper input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .file-input-label {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .file-input-label:hover {
+            background: #5568d3;
+            transform: scale(1.05);
+        }
+
+        .preview-container {
+            margin-top: 15px;
+            display: none;
+        }
+
+        .preview-container.show {
+            display: block;
+        }
+
+        .preview-image {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 10px;
+            border: 3px solid #667eea;
+        }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .template-card {
+            background: #f0f0f0;
+            border: 3px solid transparent;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .template-card:hover {
+            transform: scale(1.05);
+            border-color: #667eea;
+        }
+
+        .template-card.selected {
+            border-color: #667eea;
+            background: #e3e8ff;
+        }
+
+        .template-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .template-name {
+            font-weight: bold;
+            color: #333;
+            font-size: 0.9em;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            font-family: 'Comic Sans MS', cursive;
+            margin-right: 10px;
+        }
+
+        .btn-create {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-create:hover {
+            background: #45a049;
+            transform: scale(1.05);
+        }
+
+        .btn-edit {
+            background: #2196F3;
+            color: white;
+            padding: 8px 15px;
+            font-size: 0.9em;
+        }
+
+        .btn-edit:hover {
+            background: #0b7dda;
+        }
+
+        .btn-delete {
+            background: #f44336;
+            color: white;
+            padding: 8px 15px;
+            font-size: 0.9em;
+        }
+
+        .btn-delete:hover {
+            background: #da190b;
+        }
+
+        .btn-download {
+            background: #FF9800;
+            color: white;
+            padding: 8px 15px;
+            font-size: 0.9em;
+        }
+
+        .btn-download:hover {
+            background: #e68900;
+        }
+
+        .btn-cancel {
+            background: #999;
+            color: white;
+        }
+
+        .btn-cancel:hover {
+            background: #777;
+        }
+
+        .memes-section {
+            margin-top: 30px;
+        }
+
+        .memes-section h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .memes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .meme-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .meme-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .meme-image-container {
+            position: relative;
+            background: #000;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .meme-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .meme-caption {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-shadow: 2px 2px 4px black;
+            padding: 15px 10px;
+        }
+
+        .caption-top {
+            top: 10px;
+        }
+
+        .caption-bottom {
+            bottom: 10px;
+        }
+
+        .meme-actions {
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: white;
+            padding: 60px 20px;
+            font-size: 1.3em;
+        }
+
+        .empty-state p {
+            margin-bottom: 10px;
+        }

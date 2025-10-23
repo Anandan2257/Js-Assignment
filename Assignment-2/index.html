@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anand Meme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Meme Caption Lab 🎨</h1>
+
+        <div class="controls">
+            <div class="upload-section">
+                <h3>📤 Upload Your Own GIF or Image</h3>
+                <div class="file-input-wrapper">
+                    <input type="file" id="fileUpload" accept="image/*,.gif" onchange="handleFileUpload(event)">
+                    <label class="file-input-label">🎬 Choose File</label>
+                </div>
+                <div class="preview-container" id="previewContainer">
+                    <p style="color: #667eea; font-weight: bold; margin: 10px 0;">Preview:</p>
+                    <img id="previewImage" class="preview-image" alt="Preview">
+                </div>
+            </div>
+
+            <div class="template-section">
+                <h2>📸 OR Choose a Meme Template</h2>
+                <div class="template-grid" id="templateGrid"></div>
+            </div>
+
+            <div class="input-group">
+                <label>✍️ Step 2: Top Caption (What goes at the top)</label>
+                <input type="text" id="topCaption" placeholder="Type something funny here...">
+            </div>
+
+            <div class="input-group">
+                <label>✍️ Step 3: Bottom Caption (What goes at the bottom)</label>
+                <input type="text" id="bottomCaption" placeholder="Type the punchline here...">
+            </div>
+
+            <button class="btn btn-create" onclick="createMeme()">✨ Create My Meme!</button>
+            <button class="btn btn-cancel" onclick="cancelEdit()" id="cancelBtn" style="display:none;">❌ Cancel</button>
+        </div>
+
+        <div class="memes-section">
+            <h2>🖼️ Your Awesome Memes</h2>
+            <div class="memes-grid" id="memesGrid"></div>
+        </div>
+    </div>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

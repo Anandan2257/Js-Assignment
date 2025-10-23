@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Immigration Portan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Alien Immigration Portal</h1>
+        <form id="alienRegistrationForm">
+
+            <div class="form-group">
+                <label for="planetName">Home Planet Name:</label>
+                <input type="text" id="planetName" name="planetName" required>
+                <p class="error-message" id="planetNameError"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="antennaCount">Antenna Count (Even Numbers Only):</label>
+                <input type="number" id="antennaCount" name="antennaCount" min="0" required>
+                <p class="error-message" id="antennaCountError"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="alienID">Alien ID (ZOR-XY_9999@UFO pattern):</label>
+                <input type="text" id="alienID" name="alienID" placeholder="e.g., ZOR-AB_1234@UFO" required>
+                <p class="error-message" id="alienIDError"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="favoritePhrase">Favorite Human Phrase (Must include Emoji or Punctuation):</label>
+                <input type="text" id="favoritePhrase" name="favoritePhrase" required>
+                <p class="error-message" id="phraseError"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="landingDate">Estimated Landing Date (No Past Dates):</label>
+                <input type="date" id="landingDate" name="landingDate" required>
+                <p class="error-message" id="dateError"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="gravityTolerance">Gravity Tolerance (G-Force):</label>
+                <input type="range" id="gravityTolerance" name="gravityTolerance" min="0.5" max="5.0" step="0.1" value="1.0" oninput="document.getElementById('gravityValue').innerText = this.value">
+                <p>Value: <span id="gravityValue">1.0</span> G</p>
+            </div>
+
+            <div class="form-group">
+                <label for="motive">Motive for Visit:</label>
+                <select id="motive" name="motive" required>
+                    <option value="">Select Purpose</option>
+                    <option value="research">Galactic Research</option>
+                    <option value="tourism">Interstellar Tourism</option>
+                    <option value="snack">Acquiring Terrestrial Snacks</option>
+                    <option value="other">Other (Explain below)</option>
+                </select>
+                <p class="error-message" id="motiveError"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="vesselName">Vessel Name (Must be unique/non-standard):</label>
+                <input type="text" id="vesselName" name="vesselName" required>
+                <p class="error-message" id="vesselNameError"></p>
+            </div>
+            
+            <button type="submit">Register for Landing</button>
+
+            <div id="submissionMessage" style="margin-top: 20px;"></div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
