@@ -310,3 +310,19 @@
         .empty-state p {
             margin-bottom: 10px;
         }
+
+@media (max-width: 992px) {
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .input-group input,
+    .btn {
+        font-family: Arial, sans-serif;
+    }
+
+    h1, h2, h3 {
+        font-family: Arial, sans-serif;
+        font-weight: 600;
+    }
+}
